@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>UpWork by Himalayan Tigers</title>
+    <meta name="description" content="Experience the most simple UpWOrk for project realted to data science for free.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<style>
+		table {
+			font-family: arial, sans-serif;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td, th {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #dddddd;
+		}
+		p{font: bold; color: green;}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div id="logo"><img src="{{ url_for('static', filename='logo.png') }}">Up&nbsp;Work</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a>
+				<li><a href="/">Log In</a>
+				<li><a href="/">Sign Up</a>
+				<li><a href="/">Contact</a>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<strong>Find freelancing projects realted to data science, machine learning and many more....</strong>
+	</section>
+	<section id="pageContent">
+		<main role="main">
+		<p>All the projects posted by user id 14  that are now complete</p>
+		<table>
+			<tr><th>Project id </th> <th> Project Name</th><tr>
+			{% for res in result1 %}
+				<tr><td>{{ res[0] }} </td>   <td>{{ res[1] }}</td></tr>
+			 {% endfor %}
+		</table>
+		<br />
+		
+		<p>Retrieve the average review rating of a user whose user id is 26</p>
+		<table>
+			<tr><th>User id </th> <th> Average Rating</th><tr>
+			{% for res in result2 %}
+				<tr><td>{{ res[1] }} </td>   <td>{{ res[0] }}</td></tr>
+			 {% endfor %}
+		</table>
+		<br />
+
+		<p>Retrieve all messages for project named “Gluten free products price analysis”</p>
+		<table>
+			<tr><th>Conversation in project Gluten free products price analysis</th><tr>
+			{% for res in result3 %}
+				<tr><td>{{ res[0] }} </td>  
+			 {% endfor %}
+		</table>
+		<br />
+		
+		<p>Retrieve total number of users who are both Owner and Freelancers</p>
+		<table>
+			<tr><th>Count of users who are both owner and freelancer</th><tr>
+			{% for res in result4 %}
+				<tr><td>{{ res[0] }} </td>  
+			 {% endfor %}
+		</table>
+		<br />
+		</main>
+		<aside>
+			<div>Top Freelancers</div>
+			<div>Browse by Categories</div>
+			<div>Trending Top Skills</div>
+		</aside>
+	</section>
+	<footer>
+		<p>&copy; Mini Upwork by Himalayan Tigers</p>
+	</footer>
+
+
+</body>
+
+</html>

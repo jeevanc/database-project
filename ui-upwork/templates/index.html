@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://html5-templates.com/" />
+    <title>UpWork by Himalayan Tigers</title>
+    <meta name="description" content="Experience the most simple UpWOrk for project realted to data science for free.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+	<header>
+		<div id="logo"><img src="{{ url_for('static', filename='logo.png') }}">Up&nbsp;work</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a>
+				<li><a href="/">Log In</a>
+				<li><a href="/">Sign Up</a>
+				<li><a href="/">Contact</a>
+			</ul>
+		</nav>
+	</header>
+	<section>
+		<strong>Find freelancing projects realted to data science, machine learning and many more....</strong>
+	</section>
+	<section id="pageContent">
+		<main role="main">
+			<article>
+				<h2>Hire a freelancer?</h2>
+                <p> If you are looking to hire a freelancer for your project, find them right now.</p>
+			</article>
+			<article>
+				<h2>Looking for a job?</h2>
+                <p>Are you looking for a job? Find the right job that matches your skill and area of expertise.</p>
+			</article>
+			<article>
+				<h2>Review a freelancer!!</h2>
+                <p>Did you work with any freelancer? Please consider giving your review about them.</p>
+			</article>
+			<article>
+				<h2>Select a freelancer</h2>
+                <p>If you need to select freelancer, you can take interview with them.</p>
+			</article>
+            <article>
+				<h2>See some mind blowing data analysis (Interesting queries)</h2>
+                <p>
+                    <form action="{{ url_for('popular') }}" method="post">
+                    	<input type="submit" value="See analysis results">
+                    </form>
+                </p>
+			</article>
+		</main>
+		<aside>
+			<div><p class="side">Top Freelancers</p></div>
+			<div><p class="side">Browse by Categories</p></div>
+			<div><p class="side">Trending Top Skills</p></div>
+		</aside>
+	</section>
+	<footer>
+		<p>&copy; Mini Upwork by Himalayan Tigers</p>
+	</footer>
+
+
+</body>
+
+</html>
